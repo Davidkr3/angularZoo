@@ -1,0 +1,51 @@
+<div class="content">
+    <div>
+        <date-selector [initDate]="sharedData.getSelectedDate()" (setDateAction)="setSelectedDate($event)"></date-selector>
+    </div>
+    <table class="upperContent">
+        <tr>
+            <td>
+                <p *ngIf="visitorEstimateNumber" class="title">{{"main.visitorEstimate" | translate}}{{visitorEstimateNumber}}</p>
+                <p *ngIf="!visitorEstimateNumber" class="title">{{"main.visitorEstimateNone" | translate}}</p>
+            </td>
+            <td>
+                <div #weatherWidget class="weatherWidget">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <p class="title">{{"collection.section" | translate}}</p>
+    <table class="mainBoxTable table table-bordered table-hover table-condensed bordered" *ngIf="sharedData.getAnimalCollection().categoriesData">
+        <thead>
+            <tr>
+                <th>{{"collection.headers.description"|translate}}</th>
+                <th>{{"collection.headers.animal"|translate}}</th>
+                <th>{{"collection.headers.initHour"|translate}}</th>
+                <th>{{"collection.headers.endHour"|translate}}</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let animalInfo of sharedData.getAnimalInfoData()">
+            <td>{{animalInfo.description.name}}</td>
+            <td>{{animalInfo.animal.name}}</td>
+            <td>{{animalInfo.initTime}}</td>
+            <td>{{animalInfo.endTime}}</td>
+        </tr>
+    </table>
+    <p class="title">{{"events.section" | translate}}</p>
+    <table class="mainBoxTable table table-bordered table-hover table-condensed bordered" *ngIf="sharedData.getCalendarItem().eventsData">
+        <thead>
+            <tr>
+                <th>{{'calendar.addEvent.title' | translate}}</th>
+                <th>{{'calendar.addEvent.start' | translate}}</th>
+                <th>{{'calendar.addEvent.end' | translate}}</th>
+                <th>{{'calendar.addEvent.section' | translate}}</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let calendarEvent of sharedData.getDailyCalendarEvents(sharedData.selectedDate)">
+            <td>{{calendarEvent.title}}</td>
+            <td>{{getBigEndianStringInternationalized(calendarEvent.start)}}</td>
+            <td>{{getBigEndianStringInternationalized(calendarEvent.end)}}</td>
+            <td>{{calendarEvent.section.name}}</td>
+        </tr>
+    </table>
+</div>

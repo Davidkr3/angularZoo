@@ -1,0 +1,32 @@
+/*** Global variables ***/
+/* Global functions */
+.modal-content {
+  width: 600px;
+  margin: auto;
+  overflow: auto;
+  max-height: 600px; }
+  .modal-content .modal-header .modal-title {
+    font-size: 2vw; }
+  .modal-content .modal-body {
+    font-size: 11px; }
+    .modal-content .modal-body input {
+      margin-top: 0.7vw;
+      margin-bottom: 0.7vw; }
+    .modal-content .modal-body select {
+      margin-top: 0.7vw;
+      margin-bottom: 0.7vw; }
+    .modal-content .modal-body .alert {
+      height: 3vw;
+      font-size: 11px;
+      width: 100%;
+      padding: 6px 12px;
+      border-width: 1.25px; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1; }

@@ -1,0 +1,81 @@
+@import 'base';
+.content {
+    width: 80vw;
+    margin: auto;
+    div {
+        display: inline-block;
+        vertical-align: top;
+        ul {
+            padding: 0;
+        }
+    }
+    .concessions {
+        width: 20%;
+        .icon {
+            &.active {
+                @include rotate(-180deg);
+            }
+        }
+    }
+    .licensees {
+        width: 60vw;
+        button {
+            &.active {
+                /* Old browsers */
+                background: -moz-linear-gradient(top, #ffcf00, #cccccc);
+                /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, #ffcf00, #cccccc);
+                /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, #ffcf00, #cccccc);
+            }
+        }
+        .icon {
+            @include rotate(90deg);
+            &.active {
+                @include rotate(-90deg);
+            }
+        }
+        .showQuest {
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 1vw;
+        }
+    }
+}
+
+//outside for children inhiterance
+.submenu-item {
+    border-radius: 5px;
+    list-style: none;
+    margin-bottom: 1px;
+    background-color: #efefef;
+    padding: 10px;
+    font-size: $font-size-normal;
+    font-weight: bold;
+    text-align: center;
+    >* {
+        display: inline-block;
+    }
+    &:hover {
+        background-color: rgba(239, 239, 239, 0.7);
+    }
+    .form {
+        display: block;
+        margin: 1vw;
+    }
+    .icon:hover {
+        color: #337ab7;
+    }
+    .submenu-footer {
+        margin-left: auto;
+        margin-right: auto;
+        td {
+            text-align: center;
+            padding-right: 5vw;
+            padding-left: 5vw;
+        }
+    }
+    .submenu-label {
+        width: 100%;
+    }
+}

@@ -1,0 +1,43 @@
+/*** Global variables ***/
+/* Global functions */
+.tabs .tab-content {
+  border-left-style: solid;
+  border-left-width: 0.1vw;
+  border-top-style: solid;
+  border-top-width: 0.1vw;
+  display: block;
+  margin: 1vw;
+  margin-top: 0vw; }
+
+.tabs .tab {
+  vertical-align: top;
+  display: inline-block;
+  background-color: transparent;
+  padding: 1vw;
+  font-size: 12px;
+  border-style: solid;
+  border-width: 0.1vw;
+  border-bottom-style: none;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+  margin-top: 1vw;
+  margin-bottom: 0vw; }
+  .tabs .tab.focus {
+    /* Old browsers */
+    background: -moz-linear-gradient(top, orange, #cccccc);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, orange, #cccccc);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, orange, #cccccc); }
+
+.tabs .tab:first-child {
+  margin-left: 1vw; }
+
+.tabs .tab:hover {
+  cursor: pointer;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, orange, #cccccc);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, orange, #cccccc);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, orange, #cccccc); }

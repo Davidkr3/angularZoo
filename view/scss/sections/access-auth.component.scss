@@ -1,0 +1,55 @@
+@import 'base';
+////////////////////////////////////////////////
+@import 'sections/concessions.component.scss';
+/////////////////////////////////////////////////////
+.content {
+    width: fit-content;
+    margin: auto;
+    margin-top: 2vw;
+    .licensees {
+        width: 90vw;
+        .submenu-item {
+            .header {
+                td {
+                    padding: 0.3vw;
+                    .color-box {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .tableAccess {
+                padding: 0.2vw;
+                display: block;
+                height: 15vw;
+                overflow: auto;
+                thead {
+                    background-color: rgba(0, 0, 0, 0.6);
+                    th {
+                        width: 25vw;
+                        padding: 1vw;
+                        font-size: $font-size-header;
+                        color: white;
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+                }
+                tbody {
+                    background-color: white;
+                    td {
+                        width: 25vw;
+                        padding: 1vw;
+                        font-size: $font-size-normal;
+                        div {
+                            margin: 1vw;
+                        }
+                        .icon {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

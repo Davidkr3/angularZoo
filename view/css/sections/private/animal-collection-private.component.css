@@ -1,0 +1,15 @@
+/*** Global variables ***/
+/* Global functions */
+.innercontainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; }
+
+.inlineForm {
+  display: inline-block;
+  margin-left: 30px;
+  vertical-align: top; }
+  .inlineForm p {
+    width: auto; }

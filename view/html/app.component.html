@@ -1,0 +1,88 @@
+<table class="maincontainer">
+    <tr class="headerHeader">
+        <td>
+            <a (click)="goToBarcelonaCat()">www.barcelona.cat</a>
+        </td>
+    </tr>
+    <!-- HEADER -->
+    <tr>
+        <td class="headerFixed" [ngClass]="{scrolled: scrolled}">
+            <table class="header">
+                <tr>
+                    <td>
+                        <div class="logo-zoo-container">
+                            <img [routerLink]="['main']" class="logo-zoo" src="view/img/logo-zoo.png" />
+                        </div>
+                    </td>
+                    <!-- navbar -->
+                    <td class="navbar">
+                        <table class="navbarTable">
+                            <tr>
+                                <td>
+                                    <a [routerLink]="['main']" class="dots" routerLinkActive="active" title='{{"main.section" | translate}}'>{{"main.section" | translate}}</a>
+                                </td>
+                                <td>
+                                    <a [routerLink]="['collection']" class="dots" routerLinkActive="active" title='{{"collection.section" | translate}}'>{{"collection.section" | translate}}</a>
+                                </td>
+                                <td>
+                                    <a [routerLink]="['events']" class="dots" routerLinkActive="active" title='{{"events.section" | translate}}'>{{"events.section" | translate}}</a>
+                                </td>
+                                <td>
+                                    <a [routerLink]="['concessions']" class="dots" routerLinkActive="active" title='{{"concessions.section" | translate}}'>{{"concessions.section" | translate}}</a>
+                                </td>
+                                <td>
+                                    <a [routerLink]="['visitor-estimate']" class="dots" routerLinkActive="active" title='{{"visitor-estimate.section" | translate}}'>{{"visitor-estimate.section" | translate}}</a>
+                                </td>
+                                <td>
+                                    <a [routerLink]="['access']" class="dots" routerLinkActive="active" title='{{"access.section" | translate}}'>{{"access.section" | translate}}</a>
+                                </td>
+                                <td>
+                                    <a [routerLink]="['special-offer']" class="dots" routerLinkActive="active" title='{{"special-offer.section" | translate}}'>{{"special-offer.section" | translate}}</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="toolbar">
+                        <table class="toolbarTable">
+                            <tr>
+                                <!--<td class="linkItem">
+                            <a class="lang" [ngClass]="{active: translate.currentLang == 'es'}" (click)="changeLang('es')">Castellano</a> |
+                        </td>-->
+                                <td class="linkItem">
+                                    <a [ngClass]="{'active': translate.currentLang == 'ca'}" (click)="changeLang('ca')">Català</a>
+                                </td>
+                                <td class="linkItem">
+                                    <a [ngClass]="{'active': translate.currentLang == 'en'}" (click)="changeLang('en')">English</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="linkItem zooClub" (click)="goToZooClub()">
+                                    <a class="bold" title="Zoo Club">Zoo Club</a>
+                                </td>
+                                <td class="linkItemIcon" *ngIf="sharedServices.getLoggedUser()">
+                                    <a (click)="logout()" class="icon icon-exit" title="Logout"></a>
+                                </td>
+                                <td class="linkItem" *ngIf="!sharedServices.getLoggedUser()">
+                                    <a [routerLink]="['login']" routerLinkActive="active" class="" title="Login">Login</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div class="headerFooter">
+            </div>
+        </td>
+    </tr>
+    <tr class="spacer">
+    </tr>
+    <!--TEMPLATES-->
+    <tr class="templates">
+        <td>
+            <router-outlet></router-outlet>
+        </td>
+    </tr>
+    <tr class="footer">
+        <td>©Zoo</td>
+    </tr>
+</table>

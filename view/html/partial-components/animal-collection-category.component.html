@@ -1,0 +1,37 @@
+<div class="category">
+    <div class="category-title text-center">
+        {{categoryData.categoryName}}
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th>{{"collection.headers.description"|translate}}</th>
+                    <th>{{"collection.headers.animal"|translate}}</th>
+                    <th>{{"collection.headers.initHour"|translate}}</th>
+                    <th>{{"collection.headers.endHour"|translate}}</th>
+                </tr>
+            </thead>
+            <tr *ngFor="let info of categoryData.animalInfo" class="logged" (click)="onInfoClick(info)">
+                <td>{{info.description.name}}</td>
+                <td>{{info.animal.name}}</td>
+                <td>{{info.initTime}}</td>
+                <td>{{info.endTime}}</td>
+            </tr>
+            <!-- Add new -->
+            <tr *ngIf="isUserAuthorized()">
+                <td colspan="4">
+                    <a (click)="onAddClick()" class="icon icon-plus" title='{{"collection.animalInfoModal.add"|translate}}'></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- new -->
+<base-modal #addColInfoModal [type]="'addColInfoModal'" [authorized]="isUserAuthorized()" [params]="{'selectedInfo': selectedInfo, 'comboDesc': comboDesc, 'comboAnimal': categoryData.comboAnimals}" [title]="modalTitle" (parentAction)="saveAnimalInfo($event)"
+    [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}"></base-modal>
+
+<!-- edit -->
+<base-modal #colInfoModal [type]="'colInfoModal'" [authorized]="isUserAuthorized()" [params]="{'selectedInfo': selectedInfo, 'comboDesc': comboDesc, 'comboAnimal': categoryData.comboAnimals}" [title]="modalTitle" (parentAction)="saveAnimalInfo($event)"
+    (parentAction2)="deleteAnimalInfo($event)" [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}" [buttonParams2]="{'text': translate.get('delete')['value'], style:'danger'}"></base-modal>

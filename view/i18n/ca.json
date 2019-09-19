@@ -1,0 +1,175 @@
+{
+    "submit": "Acceptar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add": "Afegir",
+    "from": "Des de",
+    "to": "Fins a",
+    "cancel": "Cancel·lar",
+    "filled": "és obligatori",
+    "sections": {
+        "ANIMAL_COLLECTION": "Col·lecció animal",
+        "EDUCATION": "Educació",
+        "VISITOR_ESTIMATE": "Estimació de visitants",
+        "ACTS": "Actes",
+        "ACTIVITIES": "Activitats",
+        "SPECIAL_OFFERS": "Promocions",
+        "PARK_AFFECTIONS": "Afectacions del parc"
+    },
+    "collection": {
+        "section": "Col·lecció Animal",
+        "headers": {
+            "description": "Descripció",
+            "animal": "Animal",
+            "initHour": "Hora Inici",
+            "endHour": "Hora Fi",
+            "value": "Valor",
+            "actions": "Accions"
+        },
+        "animalInfoModal": {
+            "emptyDesc": "S'ha de seleccionar la descripció",
+            "edit": "Editar element",
+            "add": "Afegir nou element",
+            "emptyAnimal": "S'ha de seleccionar l'animal"
+        },
+        "categories": {
+            "seaMammals": "Mamífers marins",
+            "generalCol": "Col·lecció general",
+            "farm": "Granja",
+            "primates": "Primats",
+            "aviary": "Aviari",
+            "terrarium": "Terrarium"
+        }
+    },
+    "acts-activities": {
+        "section": "Actes i activitats especials",
+        "tabActs": "Actes",
+        "tabActivities": "Activitats"
+    },
+    "events": {
+        "section": "Esdeveniments del parc",
+        "addEvent": "Afegir nou esdeveniment"
+    },
+    "parkAffections": {
+        "section": "Afectacions del parc"
+    },
+    "concessions": {
+        "section": "Concessions",
+        "showQuest": "Respondre preguntes per a tots els seleccionats",
+        "until": "Editant fins:",
+        "global": "Per a tots els seleccionats"
+    },
+    "visitor-estimate": {
+        "section": "Previsió Visitants",
+        "addDay": {
+            "header": "Afegir nova eventualitat"
+        },
+        "editDay": {
+            "header": "Editar eventualitat"
+        },
+        "modalHeaders": {
+            "eventuality": "Tipus de eventualitat",
+            "visitorEstimate": "Visitants estimats",
+            "visitorReal": "Visitants reals",
+            "error": {
+                "noEventuality": "Slecciona un tipus de eventualitat",
+                "noVisitorEstimate": "El camp de estimació de visitants és obligatori",
+                "noVisitorReal": "El camp de visitants reals és obligatori"
+            }
+        }
+    },
+    "zoo-club": {
+        "section": "Zoo Club"
+    },
+    "access": {
+        "section": "Accessos i autoritzacions",
+        "tableAccess": {
+            "department": "Departament",
+            "claimer": "Sol·licitant",
+            "accessDate": "Data d'accés",
+            "area": "Àrea d'accés",
+            "company": "Companyia",
+            "driverName": "Conductor",
+            "carRegistration": "Matrícula",
+            "material": "Material a entregar",
+            "observations": "Observacions",
+            "authorized": "Autoritzat?",
+            "add": "Afegir nou accés"
+        },
+        "modalAccess": {
+            "addTitle": "Afegir nou accés",
+            "editTitle": "Informació de l'accés",
+            "error": {
+                "emptyDepartment": "El camp departament és obligatori",
+                "emptyClaimer": "El camp sol·licitant és obligatiori",
+                "emptyAccessDate": "La data d'accés és obligatòria",
+                "emptyAccess": "L'àrea de accés és obligatòria",
+                "emptyCompany": "El camp companyia és obligatori",
+                "emptyDriver": "El nom del conductor és obligatori",
+                "emptyCarResgistration": "La matrícula és obligatòria",
+                "emptyMaterial": "El material és obligatori"
+            }
+        }
+    },
+    "special-offer": {
+        "section": "Promocions",
+        "tableOffers": {
+            "code": "Codi",
+            "name": "Nom",
+            "price": "Preu",
+            "expiration": "Caducitat",
+            "noValid": "Invalidesa",
+            "observations": "Observacions",
+            "file": "Fitxer"
+        },
+        "modalOffer": {
+            "edit": "Informació de la promoció",
+            "add": "Afegir nova promoció",
+            "file": "Afegir fitxer",
+            "error": {
+                "emptyCode": "El camp codi és obligatotri",
+                "emptyName": "El camp nom és obligatori",
+                "emptyPrice": "El camp preu és obligatori",
+                "emptyExpiration": "El camp caducitat és obligatori"
+            }
+        },
+        "modalFile": {
+            "noFile": "No hi ha cap fitxer afegit per aquesta promoció",
+            "header": "Detalls del fitxer de promoció"
+        }
+    },
+    "login": {
+        "email": "Email",
+        "pswd": "Contrasenya",
+        "section": "Login",
+        "invalidEmail": "Email no vàlid",
+        "invalidPassword": "Contrasenya no vàlida",
+        "error": "Error al login"
+    },
+    "main": {
+        "section": "Principal",
+        "visitorEstimate": "La previsió de visitants és de: ",
+        "visitorEstimateNone": "No hi ha previsió de visitants per avui"
+    },
+    "calendar": {
+        "addEvent": {
+            "header": "Afegir esdeveniment",
+            "title": "Títol/Descripció",
+            "start": "Temps d'inici",
+            "end": "Temps de finalització",
+            "section": "Secció",
+            "error": {
+                "emptyTitle": "Títol no vàlid",
+                "emptyStart": "Temps d'inici no vàlid",
+                "emptyEnd": "Temps de finalització no vàlid",
+                "emptySection": "Selecciona una secció",
+                "logicDatesErrmMsg": "La data de finalització ha de ser posterior a la d'inici"
+            }
+        },
+        "eventInfo": {
+            "header": "Informació de l'esdeveniment",
+            "start": "Començament",
+            "end": "Finalització"
+        }
+    }
+}

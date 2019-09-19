@@ -1,0 +1,19 @@
+<li class="submenu-item">
+    <input id="check {{licensee.licensee}}" class="pointered checkBox" type="checkbox" [(ngModel)]="licensee.selected">
+    <label for="check {{licensee.licensee}}" class="submenu-label pointered">{{licensee.name}}</label>
+    <!-- only show selected-->
+    <div class="form not-pointered" *ngIf="licensee.selected" (click)="$event.stopPropagation()">
+        <form-template #single [id]="licensee.licensee" [authorized]="isUserAuthorized()" [formFields]="licensee.questions"></form-template>
+        <table class="submenu-footer">
+            <tr>
+                <td *ngIf="isUserAuthorized()">
+                    <p>{{"concessions.until"|translate}}</p>
+                    <date-selector [initDate]="untilDate" (setDateAction)="setUntilDate($event)"></date-selector>
+                </td>
+                <td>
+                    <button *ngIf="isUserAuthorized()" type="button" class="btn btn-info" (click)="saveLicenseeData(licensee)">{{translate.get('submit')['value']}}</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</li>

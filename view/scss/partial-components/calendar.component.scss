@@ -1,0 +1,66 @@
+@import 'base.scss';
+.normal {
+    width: $calendar-width;
+    margin: 1vw;
+    //event
+    .fc-content {
+        font-size: $font-size-small;
+        color: black;
+    }
+}
+
+.fc-list-item:hover {
+    cursor: pointer;
+}
+
+.fc-day-number {
+    font-size: $font-size-normal;
+}
+
+.fc-day-header {
+    font-size: $font-size-normal;
+}
+
+.small {
+    width: $calendar-small-width;
+    padding: 1%;
+    margin: auto;
+    border-width: 5px;
+    .fc-toolbar h2 {
+        font-size: $font-size-normal; //title
+    }
+    .fc-view-month .fc-event,
+    .fc-view-agendaWeek .fc-event,
+    .fc-content {
+        font-size: 0; //hide event titles
+        overflow: hidden;
+        height: 2px;
+        cursor: auto !important;
+    }
+    .fc-day-grid-container {
+        overflow: hidden !important; //hide overflow
+        height: auto !important;
+    }
+    .fc-row {
+        min-height: 1px !important;
+    }
+    .fc-day-top:hover {
+        cursor: pointer !important;
+        background-color: orange;
+    }
+}
+
+//if day click and authorized
+.dayClick {
+    .fc-day-top:hover {
+        cursor: pointer !important;
+        background-color: orange;
+    }
+}
+
+//if event click
+.eventClick {
+    .fc-content {
+        cursor: pointer;
+    }
+}

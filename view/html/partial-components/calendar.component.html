@@ -1,0 +1,9 @@
+<!-- to add -->
+<base-modal #addEventModal [authorized]="calendarOptions.authorized" [params]="{'comboSections':sharedData.getCalendarItem().comboSections, 'selectedEvent': selectedEvent, 'selectedDate': selectedDate, 'dateChange': false}" [title]="translate.get('calendar.addEvent.header')['value']"
+    [type]="'addEventModal'" (parentAction)="addEvent($event)" [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}"></base-modal>
+<!-- to edit -->
+<base-modal #eventInfoModal [authorized]="calendarOptions.authorized" [params]="{'comboSections':sharedData.getCalendarItem().comboSections, 'selectedEvent': selectedEvent, 'dateChange': false}" [type]="'eventInfoModal'" [title]="translate.get('calendar.eventInfo.header')['value']"
+    (parentAction)="editEvent($event)" (parentAction2)="deleteEvent($event)" [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}" [buttonParams2]="{'text': translate.get('delete')['value'], style:'danger'}"></base-modal>
+
+<div #calendar [ngClass]="{small: calendarOptions.small, normal: !calendarOptions.small, 
+    dayClick:calendarOptions.authorized && !notDayClick(), eventClick:calendarOptions.eventClickBehaviour=='default'}"></div>

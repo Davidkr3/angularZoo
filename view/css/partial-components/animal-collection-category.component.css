@@ -1,0 +1,21 @@
+/*** Global variables ***/
+/* Global functions */
+.category {
+  border: 2px solid;
+  border-radius: 10px;
+  width: 27vw;
+  height: 16vw;
+  overflow: auto; }
+  .category .category-title {
+    font-size: 12px; }
+  .category .table-bordered th {
+    font-size: 11px; }
+  .category .table-bordered td {
+    font-size: 11px; }
+  .category .table-bordered .logged:hover {
+    background-color: #e5e5e5;
+    cursor: pointer; }
+  .category tr:nth-child(odd) {
+    background-color: #f9f9f9; }
+  .category tr:nth-child(even) {
+    background-color: #efefef; }

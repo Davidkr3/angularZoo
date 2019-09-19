@@ -1,0 +1,20 @@
+<div class="content" *ngIf="sharedData.getSpecialOffers()">
+    <div class="concessions">
+        <ul *ngFor="let specialOfferSection of sharedData.getSpecialOffers().offerSections">
+            <li class="submenu-item pointered" [ngClass]="{'active': selectedOfferSection==specialOfferSection}" (click)="setSelectedOfferSection(specialOfferSection)">
+                <p>{{specialOfferSection.type}}</p>
+                <a class="icon-circle-right icon" [ngClass]="{'active': selectedOfferSection==specialOfferSection}"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="licensees">
+        <ul *ngIf="selectedOfferSection">
+            <!-- /offers/ -->
+            <offer-item *ngFor="let offer of selectedOfferSection.offers" [authorized]="isUserAuthorized()" [selectedOfferSection]="selectedOfferSection" [offer]="offer" [sharedData]="sharedData"></offer-item>
+            <li class="submenu-item pointered" *ngIf="isUserAuthorized()" (click)="onAddClick()">
+                <a class="icon icon-plus" title='{{"special-offer.modalOffer.add"|translate}}'></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<base-modal #addOfferModal [authorized]="isUserAuthorized()" [params]="{'offer': newOffer}" [type]="'offerInfoModal'" [title]="translate.get('special-offer.modalOffer.add')['value']" (parentAction)="addOffer($event)" [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}"></base-modal>

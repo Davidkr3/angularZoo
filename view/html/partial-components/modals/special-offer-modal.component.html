@@ -1,0 +1,37 @@
+<div>
+    <input class="form-control" type="text" placeholder="{{'special-offer.tableOffers.code' | translate}}" [(ngModel)]="offerAux.code" #codeModel="ngModel" required [disabled]="!authorized" />
+    <div [hidden]="(codeModel.valid) || firstTime || !authorized" class="alert alert-danger">
+        {{'special-offer.modalOffer.error.emptyCode'|translate}}
+    </div>
+</div>
+<div>
+    <input class="form-control" type="text" placeholder="{{'special-offer.tableOffers.name' | translate}}" [(ngModel)]="offerAux.name" #nameModel="ngModel" required [disabled]="!authorized" />
+    <div [hidden]="(nameModel.valid) || firstTime || !authorized" class="alert alert-danger">
+        {{'special-offer.modalOffer.error.emptyName'|translate}}
+    </div>
+</div>
+
+<div>
+    <p class="bold">{{'special-offer.tableOffers.price' | translate}}</p>
+    <input class="form-control" type="number" [(ngModel)]="offerAux.price" required [disabled]="!authorized" />
+</div>
+
+<!--Optional-->
+<div>
+    <p class="bold">{{'special-offer.tableOffers.noValid' | translate}}</p><br>
+    <input class="form-control" type="text" placeholder="{{'special-offer.tableOffers.noValid' | translate}}" [(ngModel)]="offerAux.noValid" #nameModel="ngModel" required [disabled]="!authorized" />
+</div>
+
+<div>
+    <p class="bold">{{'special-offer.tableOffers.expiration' | translate}}</p>
+    <input class="form-control" type="datetime-local" [(ngModel)]="expirationAux" #expirationModel="ngModel" required [disabled]="!authorized" />
+</div>
+
+<div>
+    <input class="form-control" type="text" placeholder="{{'special-offer.tableOffers.observations' | translate}}" [(ngModel)]="offerAux.observations" #observModel="ngModel" required [disabled]="!authorized" />
+</div>
+
+<div class="attatchFile">
+    <input [disabled]="!authorized" id="file" type="file" (change)="attatchFile($event.target.files[0], offerAux.offer)" value="offerAux.file" />
+    <label class="fileLabel" [ngClass]="{active: authorized}" #fileLabel for="file">{{"special-offer.modalOffer.file"|translate}}</label>
+</div>

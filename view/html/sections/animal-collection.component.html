@@ -1,0 +1,8 @@
+<div>
+    <date-selector [initDate]="sharedData.getSelectedDate()" (setDateAction)="setSelectedDate($event)"></date-selector>
+</div>
+<div class="content" *ngIf="sharedData.getAnimalCollection().categoriesData">
+    <div class="categoryTable" *ngFor="let categoryData of sharedData.getAnimalCollection().categoriesData">
+        <collection-category [selectedDate]="sharedData.getSelectedDate()" [comboDesc]="sharedData.getAnimalCollection().comboDescription" [sharedServices]="sharedServices" [categoryData]="categoryData"></collection-category>
+    </div>
+</div>

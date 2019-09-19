@@ -1,0 +1,90 @@
+@import "base.scss";
+html {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    body {
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        background-image: url("../img/animal-collection.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        .dots {
+            white-space: nowrap;
+            /* prevents text deformation */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 300px;
+        }
+        .green-btn {
+            background-color: #1abc9c;
+            &:hover {
+                background-color: red;
+                cursor: pointer;
+            }
+        }
+        .left {
+            float: left !important;
+        }
+        .bottom {
+            float: bottom;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .pointered {
+            cursor: pointer
+        }
+        .not-pointered {
+            cursor: auto;
+        }
+        .bordered {
+            border: 2px solid;
+            border-radius: 10px;
+        }
+        .right {
+            float: right !important;
+        }
+        .align-left {
+            text-align: left !important;
+        }
+        p {
+            margin: 0; //for remove bootstrap margin
+        }
+        .icon {
+            font-size: $font-size-icon;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .no-padding {
+            padding: 0px!important;
+        }
+        input,
+        select {
+            height: 35px !important;
+            font-size: $font-size-normal;
+            width: 100%;
+        }
+        button {
+            font-size: $font-size-normal !important;
+            height: 35px!important;
+            line-height: 0.8vw !important; //center vertically
+        }
+    }
+    *::-webkit-scrollbar {
+        background-color: transparent;
+        outline: 1px solid slategrey;
+        width: $scroll-width;
+        height: $scroll-width;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: #999999;
+        outline: 1px solid slategrey;
+        border: 2px solid;
+        border-radius: 3px;
+        border-color: #888;
+    }
+}

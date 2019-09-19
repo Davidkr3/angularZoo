@@ -1,0 +1,32 @@
+/*** Global variables ***/
+/* Global functions */
+.content {
+  width: 82vw;
+  margin: auto; }
+  .content .title {
+    text-align: center;
+    font-size: 2vw; }
+  .content .upperContent td {
+    padding: 1vw;
+    padding-top: 0px;
+    padding-bottom: 4vw;
+    width: 30vw; }
+  .content .upperContent .weatherWidget {
+    width: 500px;
+    height: 150px; }
+  .content .mainBoxTable {
+    padding: 0.2vw;
+    display: block;
+    height: 12vw;
+    overflow: auto; }
+    .content .mainBoxTable thead {
+      background-color: rgba(0, 0, 0, 0.6); }
+      .content .mainBoxTable thead th {
+        width: 21vw;
+        padding: 1vw;
+        font-size: 12px;
+        color: white; }
+    .content .mainBoxTable tbody td {
+      width: 21vw;
+      padding: 1vw;
+      font-size: 11px; }

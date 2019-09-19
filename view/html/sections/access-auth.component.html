@@ -1,0 +1,72 @@
+<div>
+    <date-selector #dateSelector [initDate]="sharedData.getSelectedDate()" (setDateAction)="setSelectedDate($event)"></date-selector>
+</div>
+<div class="content">
+    <div class="licensees">
+        <ul class="no-padding">
+            <li *ngFor="let access of sharedData.getAccessAuthItem().accessData" class="submenu-item pointered" (click)="setSelectedAccessData(access)">
+                <table class="header">
+                    <tr>
+                        <td>
+                            <p class="submenu-label pointered">{{access.company}}</p>
+                        </td>
+                        <td>
+                            <div class="color-box" [style.background-color]="access.color"></div>
+                        </td>
+                    </tr>
+                </table>
+                <!-- only show selected-->
+                <div class="form not-pointered" *ngIf="selectedAccessData.accessData==access.accessData" (click)="$event.stopPropagation()">
+                    <table *ngIf="selectedAccessData.accessData==access.accessData" class="tableAccess table table-bordered table-hover table-condensed bordered">
+                        <thead>
+                            <tr>
+                                <th>{{"access.tableAccess.department"|translate}}</th>
+                                <th>{{"access.tableAccess.claimer"|translate}}</th>
+                                <th>{{"access.tableAccess.accessDate"|translate}}</th>
+                                <th>{{"access.tableAccess.area"|translate}}</th>
+                                <th>{{"access.tableAccess.company"|translate}}</th>
+                                <th>{{"access.tableAccess.driverName"|translate}}</th>
+                                <th>{{"access.tableAccess.carRegistration"|translate}}</th>
+                                <th>{{"access.tableAccess.material"|translate}}</th>
+                                <th>{{"access.tableAccess.observations"|translate}}</th>
+                                <th *ngIf="isUserAuthorized()">{{"access.tableAccess.authorized"|translate}}</th>
+                                <th *ngIf="isUserAuthorized()">{{"edit"|translate}}</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>{{access.department}}</td>
+                            <td>{{access.claimer}}</td>
+                            <td>{{getDateInternacionalized(access.accessDate)}}</td>
+                            <td>{{access.area}}</td>
+                            <td>{{access.company}}</td>
+                            <td>{{access.driverName}}</td>
+                            <td>{{access.carRegistration}}</td>
+                            <td>{{access.material}}</td>
+                            <td>{{access.observations}}</td>
+                            <td *ngIf="isUserAuthorized()">
+                                <div>
+                                    <a class="icon icon-checkmark" (click)="setAuthorization('true')"></a>
+                                </div>
+                                <div>
+                                    <a class="icon icon-cross" (click)="setAuthorization('false')"></a>
+                                </div>
+                            </td>
+                            <td *ngIf="isUserAuthorized()">
+                                <div>
+                                    <a class="icon icon-pencil" (click)="clickEdit(access)"></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+            <li class="submenu-item pointered" (click)="onAddClick()">
+                <a class="icon icon-plus" title='{{"access.tableAccess.add"|translate}}'></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<base-modal #accessAuthModal [authorized]="isUserAuthorized()" [params]="{'accessData':selectedAccessData}" [type]="'accessAuthModal'" [title]="translate.get('access.modalAccess.editTitle')['value']" (parentAction)="editAccess($event)" (parentAction2)="deleteAccess($event)"
+    [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}" [buttonParams2]="{'text': translate.get('delete')['value'], style:'danger'}"></base-modal>
+<base-modal #addAccessAuthModal [authorized]="true" [params]="{'accessData':selectedAccessData}" [type]="'accessAuthModal'" [title]="translate.get('access.modalAccess.addTitle')['value']" (parentAction)="addAccess($event)" [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}"></base-modal>

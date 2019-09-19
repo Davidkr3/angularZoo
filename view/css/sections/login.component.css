@@ -1,0 +1,34 @@
+/*** Global variables ***/
+/* Global functions */
+.login {
+  margin: auto;
+  width: 90vw;
+  margin-top: 5vw; }
+  .login .login-wrapper {
+    text-align: center; }
+    .login .login-wrapper .login-form {
+      padding: 2vw;
+      display: inline-block;
+      z-index: 1;
+      overflow: hidden;
+      width: 400px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px; }
+      .login .login-wrapper .login-form .panel-header {
+        padding-top: 10px;
+        margin: auto; }
+        .login .login-wrapper .login-form .panel-header .logo-zoo-login {
+          height: 5vw; }
+      .login .login-wrapper .login-form .panel-body {
+        margin: 0 30px; }
+        .login .login-wrapper .login-form .panel-body .form-control,
+        .login .login-wrapper .login-form .panel-body .alert {
+          margin: 10px 0;
+          padding: 6px 12px; }
+        .login .login-wrapper .login-form .panel-body .btn {
+          width: 100%; }
+      .login .login-wrapper .login-form .copyright {
+        display: block;
+        color: white;
+        margin: 5px 0;
+        font-size: 11px; }

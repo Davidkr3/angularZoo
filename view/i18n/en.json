@@ -1,0 +1,175 @@
+{
+    "submit": "Submit",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "from": "From",
+    "to": "To",
+    "cancel": "Cancel",
+    "filled": "must be filled",
+    "sections": {
+        "ANIMAL_COLLECTION": "Animal collection",
+        "EDUCATION": "Education",
+        "VISITOR_ESTIMATE": "Visitor estimate",
+        "ACTS": "Acts",
+        "ACTIVITIES": "Activities",
+        "SPECIAL_OFFERS": "Special offers",
+        "PARK_AFFECTIONS": "Park affections"
+    },
+    "collection": {
+        "section": "Animal collection",
+        "headers": {
+            "description": "Description",
+            "animal": "Animal",
+            "initHour": "Init Hour",
+            "endHour": "End Hour",
+            "value": "Value",
+            "actions": "Actions"
+        },
+        "animalInfoModal": {
+            "emptyDesc": "A description must be selected",
+            "edit": "Edit item",
+            "add": "Add new item",
+            "emptyAnimal": "An animal must be selected"
+        },
+        "categories": {
+            "seaMammals": "Sea mammals",
+            "generalCol": "General collection",
+            "farm": "Farm",
+            "primates": "Primats",
+            "aviary": "Aviari",
+            "terrarium": "Terrarium"
+        }
+    },
+    "acts-activities": {
+        "section": "Special Acts and Activities",
+        "tabActs": "Acts",
+        "tabActivities": "Activities"
+    },
+    "events": {
+        "section": "Park events",
+        "addEvent": "Add new event"
+    },
+    "parkAffections": {
+        "section": "Park Affections"
+    },
+    "concessions": {
+        "section": "Concessions",
+        "showQuest": "Answer questions for selected ones",
+        "until": "Editing until:",
+        "global": "For all selected ones"
+    },
+    "visitor-estimate": {
+        "section": "Visitor Estimate",
+        "addDay": {
+            "header": "Add new eventuality"
+        },
+        "editDay": {
+            "header": "Edit eventuality"
+        },
+        "modalHeaders": {
+            "eventuality": "Eventuality type",
+            "visitorEstimate": "Estimated visitors",
+            "visitorReal": "Real visitors",
+            "error": {
+                "noEventuality": "Select an eventuality type",
+                "noVisitorEstimate": "Visitor estimate must be filled",
+                "noVisitorReal": "Visitor real must be filled"
+            }
+        }
+    },
+    "zoo-club": {
+        "section": "Zoo Club"
+    },
+    "access": {
+        "section": "Accesses and authorizations",
+        "tableAccess": {
+            "department": "Department",
+            "claimer": "Claimer",
+            "accessDate": "Access date",
+            "area": "Access area",
+            "company": "Company",
+            "driverName": "Driver",
+            "carRegistration": "Car registration",
+            "material": "Material to deliver",
+            "observations": "Observations",
+            "authorized": "Authorized?",
+            "add": "Add new access"
+        },
+        "modalAccess": {
+            "addTitle": "Add new access",
+            "editTitle": "Access information",
+            "error": {
+                "emptyDepartment": "Department field must be filled",
+                "emptyClaimer": "Claimer field must be filled",
+                "emptyAccessDate": "Access date field must be filled",
+                "emptyAccess": "Access area field must be filled",
+                "emptyCompany": "Company field must be filled",
+                "emptyDriver": "Driver field must be filled",
+                "emptyCarResgistration": "Car registration field must be filled",
+                "emptyMaterial": "Material field must be filled"
+            }
+        }
+    },
+    "special-offer": {
+        "section": "Special Offers",
+        "tableOffers": {
+            "code": "Code",
+            "name": "Name",
+            "price": "Price",
+            "expiration": "Expiration",
+            "noValid": "No validity",
+            "observations": "Observations",
+            "file": "File"
+        },
+        "modalOffer": {
+            "edit": "Special offer information",
+            "add": "Add new special offer",
+            "file": "Attatch file",
+            "error": {
+                "emptyCode": "Code field must be filled",
+                "emptyName": "Name field must be filled",
+                "emptyPrice": "Price field must be filled",
+                "emptyExpiration": "Expiration field must be filled"
+            }
+        },
+        "modalFile": {
+            "noFile": "No files attatched to this offer",
+            "header": "Special offer file details"
+        }
+    },
+    "login": {
+        "email": "Email",
+        "pswd": "Password",
+        "section": "Login",
+        "invalidEmail": "Invalid email",
+        "invalidPassword": "Invalid password",
+        "error": "Login error"
+    },
+    "main": {
+        "section": "Main",
+        "visitorEstimate": "Forecast for visitors is: ",
+        "visitorEstimateNone": "No forecast of visitors."
+    },
+    "calendar": {
+        "addEvent": {
+            "header": "Add event",
+            "title": "Title/Description",
+            "start": "Start time",
+            "end": "End time",
+            "section": "Section",
+            "error": {
+                "emptyTitle": "Invalid title",
+                "emptyStart": "Invalid start time",
+                "emptyEnd": "Invalid end time",
+                "emptySection": "Select a section",
+                "logicDatesErrmMsg": "End date must be setted after start"
+            }
+        },
+        "eventInfo": {
+            "header": "Information of event",
+            "start": "Starts",
+            "end": "Ends"
+        }
+    }
+}

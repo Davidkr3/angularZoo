@@ -1,0 +1,24 @@
+<!-- prevent from executing parent click -->
+<div class="content" *ngFor="let field of formFieldsAux" (click)="$event.stopPropagation();">
+    <!-- text -->
+    <div *ngIf="field.isTypeText()">
+        <p>{{field.statement}}</p>
+        <input class="form-control" type="text" [(ngModel)]="field.answer" [disabled]="!authorized">
+    </div>
+    <!-- option -->
+    <div *ngIf="field.isTypeSelect()">
+        <p>{{field.statement}}</p>
+        <select class="form-control" [(ngModel)]="field.answer" [disabled]="!authorized">
+            <option *ngFor="let option of field.optionsList">{{option}}</option>
+        </select>
+    </div>
+    <!-- number -->
+    <div *ngIf="field.isTypeNumber()">
+        <p>{{field.statement}}</p>
+        <input class="form-control" type="number" [(ngModel)]="field.answer" [disabled]="!authorized">
+    </div>
+
+    <div [hidden]="isFilled(field.answer) || firstTime" class="alert alert-danger">
+        {{field.statement}} {{'filled'|translate}}
+    </div>
+</div>

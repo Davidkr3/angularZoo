@@ -1,0 +1,31 @@
+<table class="login">
+    <tr>
+        <td class="login-wrapper">
+            <div class="login-form">
+                <div class="panel-header">
+                    <img class='logo-zoo-login' src="view/img/logo-zoo.png" />
+                    <!-- working with base href -->
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <input id="email" type="email" class="form-control" placeholder="{{'login.email' | translate}}" required [(ngModel)]="email" #emailModel="ngModel" (keyup)="onKey($event)" />
+                    </div>
+                    <div>
+                        <input id="password" type="password" class="form-control" placeholder="{{'login.pswd' | translate}}" required [(ngModel)]="passwd" #passwdModel="ngModel" (keyup)="onKey($event)" />
+                    </div>
+                    <div [hidden]="!errMsg" class="alert alert-danger">{{errMsg}}</div>
+
+                    <div [hidden]="(emailModel.valid && !emptyEmail) || (emailModel.pristine && !emptyEmail)" class="alert alert-danger">
+                        {{"login.invalidEmail" | translate}}
+                    </div>
+
+                    <div [hidden]="(passwdModel.valid && !emptyPasswd) || (passwdModel.pristine && !emptyPasswd)" class="alert alert-danger">
+                        {{"login.invalidPassword" | translate}}
+                    </div>
+
+                    <button (click)="login()" class="btn btn-info" type="submit" name="action">{{"login.section"|translate}}</button>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,11 @@
+/*** Global variables ***/
+/* Global functions */
+.content .calendar-small {
+  display: inline-block;
+  vertical-align: top;
+  width: 30vw;
+  margin: 2vw; }
+
+.content .agenda {
+  display: inline-block;
+  margin: auto; }

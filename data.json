@@ -1,0 +1,210 @@
+{
+    "/ca/animal/2018/08/24": {
+        "get": {            
+            "comboDescription": [
+                { "id":1, "name":"test", "color":"test"}
+            ],
+            "categoriesData": [
+                {
+                    "category":1,
+                    "categoryName": "Mammals",
+                    "animalInfo": [
+                        {
+                            "animalInfo": 1,
+                            "description": { "id":1, "name":"test", "color":"test"},
+                            "animal": { "id":1, "name":"test", "color":"test"},                            
+                            "initTime": "8:00",
+                            "endTime": "22:00"
+                        },
+                        {
+                            "animalInfo": 2,
+                            "description": { "id":1, "name":"test", "color":"test"},
+                            "animal": { "id":1, "name":"test", "color":"test"},                            
+                            "initTime": "8:00",
+                            "endTime": "22:00"
+                        }
+                    ],
+                    "comboAnimals": [
+                        { "id":1, "name":"test", "color":"test"}
+                    ]
+                },
+                {
+                    "category":1,
+                    "categoryName": "Birds",
+                    "animalInfo": [
+                        {
+                            "animalInfo": 1,
+                            "description": { "id":1, "name":"test", "color":"test"},
+                            "animal": { "id":1, "name":"test", "color":"test"},                            
+                            "initTime": "8:00",
+                            "endTime": "22:00"
+                        }
+                    ],
+                    "comboAnimals": [
+                        { "id":1, "name":"test", "color":"test"}
+                    ]
+                },
+                {
+                    "category":1,
+                    "categoryName": "Reptiles",
+                    "animalInfo": [
+                        {
+                            "animalInfo": 1,
+                            "description": { "id":1, "name":"test", "color":"test"},
+                            "animal": { "id":1, "name":"test", "color":"test"},                            
+                            "initTime": "8:00",
+                            "endTime": "22:00"
+                        }
+                    ],
+                    "comboAnimals": [
+                        { "id":1, "name":"test", "color":"test"}
+                    ]
+                },
+                {
+                    "category":1,
+                    "categoryName": "Fishes",
+                    "animalInfo": [
+                        {
+                            "animalInfo": 1,
+                            "description": { "id":1, "name":"test", "color":"test"},
+                            "animal": { "id":1, "name":"test", "color":"test"},                            
+                            "initTime": "8:00",
+                            "endTime": "22:00"
+                        }
+                    ],
+                    "comboAnimals": [
+                        { "id":1, "name":"test", "color":"test"}
+                    ]
+                }
+            ]            
+        }      
+    },
+    "/ca/animal/2018/08/23": {
+        "get": {            
+            "comboDescription": [
+                { "id":1, "name":"test", "color":"test"}
+            ],
+            "categoriesData": [
+                {
+                    "category":1,
+                    "categoryName": "Mammals",
+                    "animalInfo": [
+                        {
+                            "animalInfo": 1,
+                            "description": { "id":1, "name":"test", "color":"test"},
+                            "animal": { "id":1, "name":"test", "color":"test"},                            
+                            "initTime": "8:00",
+                            "endTime": "22:00"
+                        },
+                        {
+                            "animalInfo": 2,
+                            "description": { "id":1, "name":"test", "color":"test"},
+                            "animal": { "id":1, "name":"test", "color":"test"},                            
+                            "initTime": "8:00",
+                            "endTime": "22:00"
+                        }
+                    ],
+                    "comboAnimals": [
+                        { "id":1, "name":"test", "color":"test"}
+                    ]
+                },
+                {
+                    "category":1,
+                    "categoryName": "Birds",
+                    "animalInfo": [
+                        {
+                            "animalInfo": 1,
+                            "description": { "id":1, "name":"test", "color":"test"},
+                            "animal": { "id":1, "name":"test", "color":"test"},                            
+                            "initTime": "8:00",
+                            "endTime": "22:00"
+                        }
+                    ],
+                    "comboAnimals": [
+                        { "id":1, "name":"test", "color":"test"}
+                    ]
+                },
+                {
+                    "category":1,
+                    "categoryName": "Reptiles",
+                    "animalInfo": [
+                        {
+                            "animalInfo": 1,
+                            "description": { "id":1, "name":"test", "color":"test"},
+                            "animal": { "id":1, "name":"test", "color":"test"},                            
+                            "initTime": "8:00",
+                            "endTime": "22:00"
+                        }
+                    ],
+                    "comboAnimals": [
+                        { "id":1, "name":"test", "color":"test"}
+                    ]
+                },
+                {
+                    "category":1,
+                    "categoryName": "Fishes",
+                    "animalInfo": [
+                        {
+                            "animalInfo": 1,
+                            "description": { "id":1, "name":"test", "color":"test"},
+                            "animal": { "id":1, "name":"test", "color":"test"},                            
+                            "initTime": "8:00",
+                            "endTime": "22:00"
+                        }
+                    ],
+                    "comboAnimals": [
+                        { "id":1, "name":"test", "color":"test"}
+                    ]
+                }
+            ]            
+        }      
+    },
+    "/ca/events/2018/08": {
+        "get": {            
+            "comboSections": [
+                { "id":1, "name":"test", "color":"#004C00"},
+                { "id":2, "name":"test2", "color":"#004C00"}
+            ],
+            "eventsData": [
+                {
+                    "id":1,
+                    "title":"TestEvent",
+                    "start":"2018-08-24T14:30:00",
+                    "end":"2018-08-28T14:30:00",
+                    "section": { "id":1, "name":"test", "color":"#ff0000"},
+                    "confirmed": true,
+                    "color":"#ff0000"                    
+                },
+                {
+                    "id":2,
+                    "title":"TestEvent2",
+                    "start":"2018-08-19T14:30:00",
+                    "end":"2018-08-19T14:30:00",
+                    "section": { "id":1, "name":"test", "color":"#004C00"},
+                    "confirmed": true,
+                    "color":"#ff0000"                    
+                },
+                {
+                    "id":3,
+                    "title":"TestEvent3",
+                    "start":"2018-08-30T14:30:00",
+                    "end":"2018-08-31T14:30:00",
+                    "section": { "id":1, "name":"test", "color":"#0000FF"},
+                    "confirmed": true,
+                    "color":"#ff0000"                    
+                }
+            ]
+        }      
+    },
+    "login":
+    {
+        "get": {            
+            "username":"David",
+            "password":"Face"
+        },
+        "post": {            
+            "username":"David",
+            "password":"Face"
+        }
+    }
+}

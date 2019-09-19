@@ -1,0 +1,42 @@
+@import "../base.scss";
+.login {
+    margin: auto;
+    width: 90vw;
+    margin-top: 5vw;
+    .login-wrapper {
+        text-align: center;
+        .login-form {
+            padding: 2vw;
+            display: inline-block;
+            z-index: 1;
+            overflow: hidden;
+            width: $login-form-width;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            .panel-header {
+                padding-top: 10px;
+                margin: auto; //center
+                .logo-zoo-login {
+                    height: 5vw;
+                }
+            }
+            .panel-body {
+                margin: 0 30px;
+                .form-control,
+                .alert {
+                    margin: 10px 0;
+                    padding: 6px 12px;
+                }
+                .btn {
+                    width: 100%;
+                }
+            }
+            .copyright {
+                display: block;
+                color: white;
+                margin: 5px 0;
+                font-size: $font-size-normal;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<div class="content">
+    <ul *ngIf="sharedData.getVisitorEstimateItem().comboEventualities">
+        <li *ngFor="let eventuality of sharedData.getVisitorEstimateItem().comboEventualities">
+            <div class="color-box" [style.background-color]="eventuality.color"></div>
+            <p>{{eventuality.name}}</p>
+        </li>
+    </ul>
+    <div class="calendar">
+        <calendar [calendarOptions]="calendarOptions" [sharedServices]="sharedServices" [sharedData]="sharedData"></calendar>
+    </div>
+</div>
+
+<!-- to add -->
+<base-modal #addDailyInfoModal [authorized]="isUserAuthorized()" [params]="{'day': selectedDay, 'selectedDate': selectedDate, 'comboEventualities': sharedData.getVisitorEstimateItem().comboEventualities}" [title]="translate.get('visitor-estimate.addDay.header')['value']"
+    [type]="'addDailyInfoModal'" (parentAction)="saveDailyInfo($event)" [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}"></base-modal>
+<!-- to edit -->
+<base-modal #dailyInfoModal [authorized]="isUserAuthorized()" [params]="{'selectedDate': selectedDate, 'day': selectedDay, 'comboEventualities': sharedData.getVisitorEstimateItem().comboEventualities}" [type]="'dailyInfoModal'" [title]="translate.get('visitor-estimate.editDay.header')['value']"
+    (parentAction)="saveDailyInfo($event)" (parentAction2)="deleteDailyInfo($event)" [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}" [buttonParams2]="{'text': translate.get('delete')['value'], style:'danger'}"></base-modal>

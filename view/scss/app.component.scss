@@ -1,0 +1,165 @@
+@import 'base.scss';
+.maincontainer {
+    width: $maincontainer-width;
+    margin: auto;
+    .headerHeader {
+        background-color: #990000;
+        height: $upper-navbar-header-height;
+        text-align: center;
+        a {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    //td
+    .headerFixed {
+        position: fixed;
+        z-index: 50;
+        &.scrolled {
+            top: 0;
+            transition: .3s ease-in-out;
+            .header {
+                background-color: rgba(0, 0, 0, 1);
+                transition: .3s ease-in-out;
+                .logo-zoo-container {
+                    .logo-zoo {
+                        width: 70px;
+                        transition: .3s ease-in-out;
+                    }
+                }
+            }
+        }
+        .header {
+            background-color: rgba(0, 0, 0, 0.4);
+            width: $header-width;
+            height: $header-height;
+            .logo-zoo-container {
+                width: 105px;
+                padding: 20px;
+                .logo-zoo {
+                    width: 80px;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+                }
+            }
+            .toolbar {
+                .toolbarTable {
+                    p {
+                        font-size: $font-size-normal;
+                    }
+                    .linkItemIcon {
+                        padding: 15px;
+                        a {
+                            color: #FFFFFF;
+                            text-align: center;
+                            font-size: $font-size-icon;
+                            &:hover {
+                                color: #ffcf00;
+                            }
+                        }
+                    }
+                    .linkItem {
+                        padding: 15px !important;
+                        a {
+                            text-align: center;
+                            color: #FFFFFF;
+                            cursor: pointer;
+                            text-decoration: none;
+                            font-size: $font-size-normal;
+                            &.active {
+                                color: #ffcf00; //bootstrap override
+                            }
+                        }
+                    }
+                    .zooClub {
+                        border-radius: 10px;
+                        cursor: pointer;
+                        background-color: #ffcf00;
+                        width: 4.5vw; //for transition
+                        padding: 5px!important;
+                        transition: .3s ease-in-out;
+                        a {
+                            font-size: $font-size-normal;
+                            text-align: center;
+                            color: #005094;
+                        }
+                        &:hover {
+                            background-color: #005094;
+                            width: 10vw;
+                            text-align: center;
+                            a {
+                                color: #ffcf00;
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar {
+                vertical-align: bottom;
+                .navbarTable {
+                    margin: auto;
+                    a {
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        height: 50px;
+                        padding: $navbar-elements-width * 0.03;
+                        display: block;
+                        color: white;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: $font-size-header;
+                        border-radius: 5px;
+                        text-decoration: none;
+                        cursor: pointer;
+                        &:hover,
+                        &.active {
+                            border-bottom: 4px solid;
+                            border-bottom-color: #ffcf00;
+                        }
+                    }
+                }
+            }
+        }
+        .headerFooter {
+            min-height: 25px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+    .spacer {
+        height: $spacer-height;
+    }
+    .templates {
+        background: rgba(255, 255, 255, 1);
+        height: $templates-height; //TODO: remove
+        vertical-align: top;
+    }
+    .footer {
+        height: $footer-height;
+        background-color: rgba(0, 0, 0, 1);
+        width: 100%;
+        text-align: center;
+        display: table;
+        td {
+            color: white;
+            font-size: $font-size-header;
+            font-weight: bold;
+            text-decoration: none;
+            margin: auto;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    //media query
+    @media screen and (max-width: $small-screen-width) {
+        .header {
+            .navbar {
+                a {
+                    width: 50px; //for dots
+                }
+            }
+        }
+    }
+}

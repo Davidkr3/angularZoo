@@ -1,0 +1,38 @@
+<div>
+    <input class="form-control" type="text" placeholder="{{'access.tableAccess.department'|translate}}" [(ngModel)]="accessDataAux.department" #departmentModel="ngModel" required [disabled]="!authorized" />
+    <div [hidden]="(departmentModel.valid) || firstTime || !authorized" class="alert alert-danger">
+        {{'access.modalAccess.error.emptyDepartment'|translate}}
+    </div>
+    <input class="form-control" type="text" placeholder="{{'access.tableAccess.claimer'|translate}}" [(ngModel)]="accessDataAux.claimer" #claimerModel="ngModel" required [disabled]="!authorized" />
+    <div [hidden]="(claimerModel.valid) || firstTime || !authorized" class="alert alert-danger">
+        {{'access.modalAccess.error.emptyClaimer'|translate}}
+    </div>
+    <div>
+        <p class="bold">{{'access.tableAccess.accessDate'|translate}}</p>
+        <input class="form-control" type="datetime-local" [(ngModel)]="accessDateTimeAux" #accessDateModel="ngModel" required [disabled]="!authorized" />
+    </div>
+    <div [hidden]="(accessDateModel.valid) || firstTime || !authorized" class="alert alert-danger">
+        {{'access.modalAccess.error.emptyAccessDate'|translate}}
+    </div>
+    <input class="form-control" type="text" placeholder="{{'access.tableAccess.area'|translate}}" [(ngModel)]="accessDataAux.area" #accessModel="ngModel" required [disabled]="!authorized" />
+    <div [hidden]="(accessModel.valid) || firstTime || !authorized" class="alert alert-danger">
+        {{'access.modalAccess.error.emptyAccess'|translate}}
+    </div>
+    <input class="form-control" type="text" placeholder="{{'access.tableAccess.company'|translate}}" [(ngModel)]="accessDataAux.company" #companyModel="ngModel" required [disabled]="!authorized" />
+    <div [hidden]="(companyModel.valid) || firstTime || !authorized" class="alert alert-danger">
+        {{'access.modalAccess.error.emptyCompany'|translate}}
+    </div>
+    <input class="form-control" type="text" placeholder="{{'access.tableAccess.driverName'|translate}}" [(ngModel)]="accessDataAux.driverName" #driverModel="ngModel" required [disabled]="!authorized" />
+    <div [hidden]="(driverModel.valid) || firstTime || !authorized" class="alert alert-danger">
+        {{'access.modalAccess.error.emptyDriver'|translate}}
+    </div>
+    <input class="form-control" type="text" placeholder="{{'access.tableAccess.carRegistration'|translate}}" [(ngModel)]="accessDataAux.carRegistration" #carRegistrationModel="ngModel" required [disabled]="!authorized" />
+    <div [hidden]="(carRegistrationModel.valid) || firstTime || !authorized" class="alert alert-danger">
+        {{'access.modalAccess.error.emptyCarResgistration'|translate}}
+    </div>
+    <input class="form-control" type="text" placeholder="{{'access.tableAccess.material'|translate}}" [(ngModel)]="accessDataAux.material" #materialModel="ngModel" required [disabled]="!authorized" />
+    <div [hidden]="(materialModel.valid) || firstTime || !authorized" class="alert alert-danger">
+        {{'access.modalAccess.error.emptyMaterial'|translate}}
+    </div>
+    <textarea rows="3" cols="50" class="form-control" type="text" placeholder="{{'access.tableAccess.observations'|translate}}" [(ngModel)]="accessDataAux.observations" #codeModel="ngModel" required [disabled]="!authorized"></textarea>
+</div>

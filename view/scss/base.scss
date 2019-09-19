@@ -1,0 +1,61 @@
+/*** Global variables ***/
+
+//screen sizes
+$small-screen-width: 1120px;
+//font
+$font-size-normal: 11px;
+$font-size-small: 9px;
+$font-size-title: 2vw; //may be reduced
+$font-size-header: 12px;
+$font-size-icon: 15px;
+// Login
+$login-form-width: 400px;
+// Application heights
+$upper-navbar-header-height: 10px;
+$header-height: 105px; //must be the same
+$spacer-height: 130px;
+$templates-height: 800px;
+$footer-height: 40px;
+$navbar-elements-width: 20px;
+$header-width: 95vw;
+// Scroll
+$scroll-width: 10px;
+//content
+$maincontainer-width:95vw;
+//calendar
+$calendar-width:450px;
+$calendar-small-width:200px;
+//modals
+$modal-width: 600px;
+$modal-height: 600px;
+
+/* Global functions */
+
+@mixin rotate($angle) {
+    -webkit-transform: rotate($angle);
+    /* Chrome and other webkit browsers */
+    -moz-transform: rotate($angle);
+    /* FF */
+    -ms-transform: rotate($angle);
+    /* IE9 */
+    -o-transform: rotate($angle);
+    /* Opera */
+    transform: rotate($angle);
+    /* W3C compliant browsers */
+}
+
+@mixin shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin calc($prop, $expression) {
+    #{$prop}: -webkit-calc(#{$expression});
+    /* WebKit */
+    #{$prop}: -moz-calc(#{$expression});
+    /* Firefox */
+    #{$prop}: -o-calc(#{$expression});
+    /* Opera */
+    #{$prop}: calc(#{$expression});
+    /* Standard */
+}

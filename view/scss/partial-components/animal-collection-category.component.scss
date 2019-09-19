@@ -1,0 +1,34 @@
+@import 'base';
+.category {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 27vw;
+    height: 16vw;
+    overflow: auto;
+    .category-title {
+        font-size: $font-size-header;
+    }
+    //overload
+    .table-bordered {
+        //scroll no header
+        //display: block;
+        // height: 88%;
+        // overflow: auto;
+        th {
+            font-size: $font-size-normal;
+        }
+        td {
+            font-size: $font-size-normal;
+        }
+        .logged:hover {
+            background-color: #e5e5e5;
+            cursor: pointer;
+        }
+    }
+    tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+    tr:nth-child(even) {
+        background-color: #efefef;
+    }
+}

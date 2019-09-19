@@ -1,0 +1,47 @@
+/*** Global variables ***/
+/* Global functions */
+.normal {
+  width: 450px;
+  margin: 1vw; }
+  .normal .fc-content {
+    font-size: 9px;
+    color: black; }
+
+.fc-list-item:hover {
+  cursor: pointer; }
+
+.fc-day-number {
+  font-size: 11px; }
+
+.fc-day-header {
+  font-size: 11px; }
+
+.small {
+  width: 200px;
+  padding: 1%;
+  margin: auto;
+  border-width: 5px; }
+  .small .fc-toolbar h2 {
+    font-size: 11px; }
+  .small .fc-view-month .fc-event,
+  .small .fc-view-agendaWeek .fc-event,
+  .small .fc-content {
+    font-size: 0;
+    overflow: hidden;
+    height: 2px;
+    cursor: auto !important; }
+  .small .fc-day-grid-container {
+    overflow: hidden !important;
+    height: auto !important; }
+  .small .fc-row {
+    min-height: 1px !important; }
+  .small .fc-day-top:hover {
+    cursor: pointer !important;
+    background-color: orange; }
+
+.dayClick .fc-day-top:hover {
+  cursor: pointer !important;
+  background-color: orange; }
+
+.eventClick .fc-content {
+  cursor: pointer; }

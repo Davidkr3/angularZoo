@@ -1,0 +1,23 @@
+<div *ngIf="visibleInput" class="modal fade show in danger" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span (click)="setVisible(false)" class="close">&times;</span>
+                <h2 class="modal-title">{{title}}</h2>
+            </div>
+            <div class="modal-body">
+                <add-calendar-event-modal [comboSections]="params['comboSections']" [authorized]="authorized" [mode]="type" [event]="params['selectedEvent']" [selectedDate]="params['selectedDate']" [dateChange]="params['dateChange']" *ngIf="type=='addEventModal'||type=='eventInfoModal'"></add-calendar-event-modal>
+                <animal-collection-info-modal [authorized]="authorized" [selectedInfo]="params['selectedInfo']" [comboDesc]="params['comboDesc']" [comboAnimal]="params['comboAnimal']" *ngIf="type=='colInfoModal'||type=='addColInfoModal'"></animal-collection-info-modal>
+                <add-special-offer-modal [authorized]="authorized" [offer]="params['offer']" *ngIf="type=='addOfferModal'||type=='offerInfoModal'"></add-special-offer-modal>
+                <access-auth-modal [authorized]="authorized" [accessData]="params['accessData']" *ngIf="type=='accessAuthModal'"></access-auth-modal>
+                <add-daily-info-modal [selectedDate]="params['selectedDate']" [comboEventualities]="params['comboEventualities']" [authorized]="authorized" [day]="params['day']" *ngIf="type=='addDailyInfoModal'||type=='dailyInfoModal'"></add-daily-info-modal>
+                <file-modal [file]="params['file']" *ngIf="type=='fileModal'"></file-modal>
+            </div>
+            <div class='modal-footer'>
+                <button *ngIf="authorized && buttonParams2" (click)=" secondaryAction() " class="btn left " [ngClass]="{ 'btn-info': buttonParams2[ 'style']=='info' , 'btn-danger': buttonParams2[ 'style']=='danger' } " type="submit " name="action ">{{buttonParams2['text']}}</button>
+                <button *ngIf="authorized && buttonParams" (click)="action()" class="btn right" [ngClass]="{ 'btn-info': buttonParams[ 'style']=='info' , 'btn-danger': buttonParams[ 'style']=='danger' } " type="submit " name="action ">{{buttonParams['text']}}</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="visibleInput " class="overlay " (click)="setVisible(false) "></div>
+</div>

@@ -1,0 +1,34 @@
+<h2>{{selectedInfo.description.name}}</h2>
+<div>
+    <p>{{'collection.headers.description' | translate}}</p>
+    <select [disabled]="!authorized" class="form-control" [(ngModel)]="selectedInfoAux.description.name" #descriptionModel="ngModel">
+            <option *ngFor="let desc of comboDesc">{{desc.name}}</option>
+    </select>
+    <div [hidden]="(selectedInfoAux.description.name) || firstTime" class="alert alert-danger">
+        {{'collection.animalInfoModal.emptyDesc'|translate}}
+    </div>
+</div>
+<div>
+    <p>{{'collection.headers.animal' | translate}}</p>
+    <select [disabled]="!authorized" class="form-control" [(ngModel)]="selectedInfoAux.animal.name">
+            <option *ngFor="let animal of comboAnimal">{{animal.name}}</option>
+    </select>
+    <div [hidden]="(selectedInfoAux.animal.name) || firstTime" class="alert alert-danger">
+        {{'collection.animalInfoModal.emptyAnimal'|translate}}
+    </div>
+</div>
+<div>
+    <p>{{'calendar.addEvent.start' | translate}}</p>
+    <input [disabled]="!authorized" class="form-control" type="time" required [(ngModel)]="selectedInfoAux.initTime" required/>
+    <div [hidden]="selectedInfoAux.initTime || firstTime" class="alert alert-danger">
+        {{'calendar.addEvent.error.emptyStart'|translate}}
+    </div>
+</div>
+<div>
+    <p>{{'calendar.addEvent.end' | translate}}</p>
+    <input [disabled]="!authorized" class="form-control" type="time" required [(ngModel)]="selectedInfoAux.endTime" required/>
+    <div [hidden]="selectedInfoAux.endTime || firstTime" class="alert alert-danger">
+        {{'calendar.addEvent.error.emptyEnd'|translate}}
+    </div>
+</div>
+<div [hidden]="!logicDatesErrmMsg" class="alert alert-danger">{{logicDatesErrmMsg}}</div>

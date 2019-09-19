@@ -1,0 +1,47 @@
+<h2 *ngIf='!dateChange && mode=="addEventModal"'>{{getSelectedDateString()}}</h2>
+<div *ngIf='dateChange && mode=="addEventModal"'>
+    <date-selector [initDate]="selectedDate" (setDateAction)="setSelectedDate($event)"></date-selector>
+</div>
+
+<input class="form-control" type="text" placeholder="{{'calendar.addEvent.title' | translate}}" [(ngModel)]="eventAux.title" #titleModel="ngModel" required [disabled]="!authorized" />
+<div [hidden]="(titleModel.valid) || firstTime || !authorized" class="alert alert-danger">
+    {{'calendar.addEvent.error.emptyTitle'|translate}}
+</div>
+<div>
+    <p class="bold">{{'calendar.addEvent.start' | translate}}</p>
+
+
+    <!-- add mode: time -->
+    <div *ngIf='mode=="addEventModal"'>
+        <input class="form-control" type="time" [(ngModel)]="startTimeAux" required [disabled]="!authorized" />
+        <div [hidden]="startTimeAux || firstTime || !authorized" class="alert alert-danger">
+            {{'calendar.addEvent.error.emptyStart'|translate}}
+        </div>
+    </div>
+    <!-- edit mode: datetime -->
+    <div *ngIf='mode=="eventInfoModal"'>
+        <input class="form-control" type="datetime-local" [(ngModel)]="eventAux.start" required [disabled]="!authorized" />
+        <div [hidden]="eventAux.start || firstTime || !authorized" class="alert alert-danger">
+            {{'calendar.addEvent.error.emptyStart'|translate}}
+        </div>
+    </div>
+
+
+</div>
+<div>
+    <p class="bold">{{'calendar.addEvent.end' | translate}}</p>
+    <input class="form-control" type="datetime-local" [(ngModel)]="eventAux.end" required [disabled]="!authorized" />
+    <div [hidden]="eventAux.end || firstTime || !authorized" class="alert alert-danger">
+        {{'calendar.addEvent.error.emptyEnd'|translate}}
+    </div>
+</div>
+<div>
+    <p class="bold">{{'calendar.addEvent.section' | translate}}</p>
+    <select class="form-control" [(ngModel)]="eventAux.section.name" [disabled]="!authorized">
+            <option *ngFor="let section of comboSections">{{section.name}}</option>
+    </select>
+    <div [hidden]="eventAux.section.name || firstTime || !authorized" class="alert alert-danger">
+        {{'calendar.addEvent.error.emptySection'|translate}}
+    </div>
+</div>
+<div [hidden]="!logicDatesErrmMsg" class="alert alert-danger">{{logicDatesErrmMsg}}</div>

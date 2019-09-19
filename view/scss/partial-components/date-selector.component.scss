@@ -1,0 +1,30 @@
+@import 'base.scss';
+@import 'main.scss';
+.content {
+    margin-left: 1vw;
+    .date-shared {
+        font-size: $font-size-title;
+        vertical-align: top;
+        margin: 1vw;
+        margin-bottom: 0px;
+        background: transparent;
+        border: 0px;
+        /////////     
+        >* {
+            display: inline-block;
+        }
+    }
+    .icon {
+        @include rotate(90deg);
+    }
+}
+
+input {
+    opacity: 0; //hide
+    overflow: hidden;
+    z-index: -1;
+    height: 0px!important;
+    vertical-align: top;
+    margin: 0px!important;
+    margin-top: -10px;
+}

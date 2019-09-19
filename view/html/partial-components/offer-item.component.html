@@ -1,0 +1,53 @@
+<li class="submenu-item pointered" (click)="setShowData()">
+    <table class="header">
+        <tr>
+            <td>
+                <label class="submenu-label pointered">{{offer.name}}</label>
+            </td>
+            <td>
+                <div class="color-box" [style.background-color]="hasOfferExpired()"></div>
+            </td>
+        </tr>
+    </table>
+    <!-- only show selected-->
+    <div class="form not-pointered" *ngIf="showData" (click)="$event.stopPropagation()">
+        <table class="tableOffers table table-bordered table-hover table-condensed bordered">
+            <thead>
+                <tr>
+                    <th>{{"special-offer.tableOffers.code"|translate}}</th>
+                    <th>{{"special-offer.tableOffers.name"|translate}}</th>
+                    <th>{{"special-offer.tableOffers.price"|translate}}</th>
+                    <th>{{"special-offer.tableOffers.expiration"|translate}}</th>
+                    <th>{{"special-offer.tableOffers.noValid"|translate}}</th>
+                    <th>{{"special-offer.tableOffers.observations"|translate}}</th>
+                    <th *ngIf="offer.file">{{"special-offer.tableOffers.file"|translate}}</th>
+                    <th *ngIf="authorized">{{"edit"|translate}}</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>{{offer.code}}</td>
+                <td>{{offer.name}}</td>
+                <td>
+                    <p *ngIf="offer.price">{{offer.price}}€</p>
+                </td>
+                <td>
+                    <p *ngIf="offer.expiration">{{getDateInternacionalized(offer.expiration)}}</p>
+                </td>
+                <td>{{offer.noValid}}</td>
+                <td>{{offer.observations}}</td>
+                <td *ngIf="offer.file">
+                    <a class="icon icon-file-picture" (click)="openFile(offer.file)"></a>
+                </td>
+                <td *ngIf="authorized">
+                    <a class="icon icon-pencil" (click)="clickEdit(offer)"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</li>
+
+<base-modal #offerInfoModal [authorized]="authorized" [params]="{'offer':offer}" [type]="'offerInfoModal'" [title]="translate.get('special-offer.modalOffer.edit')['value']" (parentAction)="editOffer($event)" (parentAction2)="deleteOffer($event)" [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}"
+    [buttonParams2]="{'text': translate.get('delete')['value'], style:'danger'}"></base-modal>
+
+<!-- file modal -->
+<base-modal #fileModal [title]="translate.get('special-offer.modalFile.header')['value']" [params]="{'file': offer.file}" [type]="'fileModal'"></base-modal>

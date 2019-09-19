@@ -1,0 +1,43 @@
+@import 'base';
+@import 'sections/concessions.component.scss';
+.header {
+    td {
+        padding: 0.3vw;
+        .color-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.tableOffers {
+    padding: 0.2vw;
+    display: block;
+    overflow: auto;
+    height: 100%;
+    thead {
+        background-color: rgba(0, 0, 0, 0.6);
+        th {
+            width: 21vw;
+            padding: 1vw;
+            font-size: $font-size-header;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+    tbody {
+        background-color: white;
+        tr {
+            td {
+                width: 21vw;
+                padding: 1vw;
+                font-size: $font-size-normal;
+                .icon {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}

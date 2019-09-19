@@ -1,0 +1,18 @@
+<table class="content">
+    <!-- legend -->
+    <ul>
+        <li *ngFor="let section of sharedData.getCalendarItem().comboSections">
+            <div class="color-box" [style.background-color]="section.color"></div>
+            <p>{{section.name}}</p>
+        </li>
+    </ul>
+    <tr class="calendar">
+        <calendar #calendar [calendarOptions]="calendarOptions" [sharedServices]="sharedServices" [sharedData]="sharedData" (eventRefreshAction)="agendaEventRefresh()"></calendar>
+    </tr>
+    <tr class="agenda">
+        <button *ngIf="isUserAuthorized()" type="button" class="btn btn-info" (click)="onAddEventButtonClick()">{{"events.addEvent"|translate}}</button>
+        <calendar #agenda [calendarOptions]="agendaOptions" [sharedServices]="sharedServices" [sharedData]="sharedData" (eventRefreshAction)="calendarEventRefresh()"></calendar>
+    </tr>
+</table>
+<base-modal #addEventModal [authorized]="true" [params]="{'comboSections':sharedData.getCalendarItem().comboSections, 'selectedEvent': selectedEvent, 'selectedDate': selectedDate, 'dateChange': true}" [title]="translate.get('calendar.addEvent.header')['value']"
+    [type]="'addEventModal'" (parentAction)="addEvent($event)" [buttonParams]="{'text': translate.get('submit')['value'], style:'info'}"></base-modal>

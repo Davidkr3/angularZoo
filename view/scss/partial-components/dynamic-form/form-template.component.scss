@@ -1,0 +1,18 @@
+@import 'base';
+.content {
+    margin: 2vw;
+    //structure can't fit to modals inheritance
+    .alert {
+        height: 3vw;
+        font-size: $font-size-normal;
+        width: 100%;
+        padding: 6px 12px;
+        border-width: 1.25px;
+    }
+    p {
+        margin-bottom: 0.5vw;
+        margin-top: 0.5vw;
+        font-size: $font-size-normal;
+        font-weight: normal;
+    }
+}

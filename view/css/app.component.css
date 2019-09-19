@@ -1,0 +1,121 @@
+/*** Global variables ***/
+/* Global functions */
+.maincontainer {
+  width: 95vw;
+  margin: auto; }
+  .maincontainer .headerHeader {
+    background-color: #990000;
+    height: 10px;
+    text-align: center; }
+    .maincontainer .headerHeader a {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer; }
+  .maincontainer .headerFixed {
+    position: fixed;
+    z-index: 50; }
+    .maincontainer .headerFixed.scrolled {
+      top: 0;
+      transition: .3s ease-in-out; }
+      .maincontainer .headerFixed.scrolled .header {
+        background-color: black;
+        transition: .3s ease-in-out; }
+        .maincontainer .headerFixed.scrolled .header .logo-zoo-container .logo-zoo {
+          width: 70px;
+          transition: .3s ease-in-out; }
+    .maincontainer .headerFixed .header {
+      background-color: rgba(0, 0, 0, 0.4);
+      width: 95vw;
+      height: 105px; }
+      .maincontainer .headerFixed .header .logo-zoo-container {
+        width: 105px;
+        padding: 20px; }
+        .maincontainer .headerFixed .header .logo-zoo-container .logo-zoo {
+          width: 80px;
+          cursor: pointer;
+          transition: .3s ease-in-out; }
+      .maincontainer .headerFixed .header .toolbar .toolbarTable p {
+        font-size: 11px; }
+      .maincontainer .headerFixed .header .toolbar .toolbarTable .linkItemIcon {
+        padding: 15px; }
+        .maincontainer .headerFixed .header .toolbar .toolbarTable .linkItemIcon a {
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 15px; }
+          .maincontainer .headerFixed .header .toolbar .toolbarTable .linkItemIcon a:hover {
+            color: #ffcf00; }
+      .maincontainer .headerFixed .header .toolbar .toolbarTable .linkItem {
+        padding: 15px !important; }
+        .maincontainer .headerFixed .header .toolbar .toolbarTable .linkItem a {
+          text-align: center;
+          color: #FFFFFF;
+          cursor: pointer;
+          text-decoration: none;
+          font-size: 11px; }
+          .maincontainer .headerFixed .header .toolbar .toolbarTable .linkItem a.active {
+            color: #ffcf00; }
+      .maincontainer .headerFixed .header .toolbar .toolbarTable .zooClub {
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #ffcf00;
+        width: 4.5vw;
+        padding: 5px !important;
+        transition: .3s ease-in-out; }
+        .maincontainer .headerFixed .header .toolbar .toolbarTable .zooClub a {
+          font-size: 11px;
+          text-align: center;
+          color: #005094; }
+        .maincontainer .headerFixed .header .toolbar .toolbarTable .zooClub:hover {
+          background-color: #005094;
+          width: 10vw;
+          text-align: center; }
+          .maincontainer .headerFixed .header .toolbar .toolbarTable .zooClub:hover a {
+            color: #ffcf00; }
+      .maincontainer .headerFixed .header .navbar {
+        vertical-align: bottom; }
+        .maincontainer .headerFixed .header .navbar .navbarTable {
+          margin: auto; }
+          .maincontainer .headerFixed .header .navbar .navbarTable a {
+            margin-left: 5px;
+            margin-right: 5px;
+            height: 50px;
+            padding: 0.6px;
+            display: block;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer; }
+            .maincontainer .headerFixed .header .navbar .navbarTable a:hover, .maincontainer .headerFixed .header .navbar .navbarTable a.active {
+              border-bottom: 4px solid;
+              border-bottom-color: #ffcf00; }
+    .maincontainer .headerFixed .headerFooter {
+      min-height: 25px;
+      background-color: rgba(0, 0, 0, 0.6); }
+  .maincontainer .spacer {
+    height: 130px; }
+  .maincontainer .templates {
+    background: white;
+    height: 800px;
+    vertical-align: top; }
+  .maincontainer .footer {
+    height: 40px;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    display: table; }
+    .maincontainer .footer td {
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: auto;
+      display: table-cell;
+      vertical-align: middle; }
+  @media screen and (max-width: 1120px) {
+    .maincontainer .header .navbar a {
+      width: 50px; } }

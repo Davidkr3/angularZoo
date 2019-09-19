@@ -1,0 +1,38 @@
+<div>
+    <date-selector #dateSelector [initDate]="sharedData.getSelectedDate()" (setDateAction)="setSelectedDate($event)"></date-selector>
+</div>
+<div class="content" *ngIf="sharedData.getConcessions()">
+    <div class="concessions">
+        <ul *ngFor="let concession of sharedData.getConcessions().concessionsData">
+            <li class="submenu-item pointered align-left" [ngClass]="{'active': selectedConcession==concession}" (click)="openSelectedConcession(concession)">
+                <p>{{concession.description}}</p>
+                <a class="icon-circle-right icon" [ngClass]="{'active': selectedConcession==concession}"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="licensees">
+        <ul *ngIf="selectedConcession">
+            <button [ngClass]="{'active': showQuestions}" (click)="setShowQuestions()" class="btn btn-info showQuest" *ngIf="getSelectedLicensees().length > 0">{{translate.get('concessions.showQuest')['value']}}</button>
+            <!-- for all selected-->
+            <li class="submenu-item active bordered" *ngIf="showQuestions&&getSelectedLicensees().length > 0">
+                <h2 class="submenu-label">{{"concessions.global"|translate}}</h2>
+                <div class="form">
+                    <form-template #global [authorized]="isUserAuthorized()" [formFields]="emptyQuestionsAux"></form-template>
+                    <table class="submenu-footer">
+                        <tr>
+                            <td *ngIf="isUserAuthorized()">
+                                <p>{{"concessions.until"|translate}}</p>
+                                <date-selector #dateSelector [initDate]="untilDate" (setDateAction)="setUntilDate($event)"></date-selector>
+                            </td>
+                            <td>
+                                <button *ngIf="isUserAuthorized()" type="button" class="btn btn-info" (click)="saveLicenseesMultipleData()">{{translate.get('submit')['value']}}</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+            <!-- /licensees/ -->
+            <concession-licensee *ngFor="let licensee of selectedConcession.licensees" [sharedServices]="sharedServices" [selectedConcession]="selectedConcession" [licensee]="licensee" [sharedData]="sharedData"></concession-licensee>
+        </ul>
+    </div>
+</div>
