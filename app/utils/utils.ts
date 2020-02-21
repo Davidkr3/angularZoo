@@ -1,5 +1,3 @@
-import { WebStorage } from './web-storage';
-
 export class Utils {
     public static getTwoDigits(num: number): string {
         return num < 10 ? "0" + num.toString() : num.toString();

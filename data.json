@@ -1,5 +1,5 @@
 {
-    "/ca/animal/2018/08/24": {
+    "/en/animal/2020/02/21": {
         "get": {            
             "comboDescription": [
                 { "id":1, "name":"test", "color":"test"}
@@ -79,7 +79,7 @@
             ]            
         }      
     },
-    "/ca/animal/2018/08/23": {
+    "/en/animal/2020/02/22": {
         "get": {            
             "comboDescription": [
                 { "id":1, "name":"test", "color":"test"}
@@ -159,7 +159,7 @@
             ]            
         }      
     },
-    "/ca/events/2018/08": {
+    "/en/events/2020/02": {
         "get": {            
             "comboSections": [
                 { "id":1, "name":"test", "color":"#004C00"},
@@ -169,8 +169,8 @@
                 {
                     "id":1,
                     "title":"TestEvent",
-                    "start":"2018-08-24T14:30:00",
-                    "end":"2018-08-28T14:30:00",
+                    "start":"2020-02-21T14:30:00",
+                    "end":"2020-02-22T14:30:00",
                     "section": { "id":1, "name":"test", "color":"#ff0000"},
                     "confirmed": true,
                     "color":"#ff0000"                    
@@ -178,8 +178,8 @@
                 {
                     "id":2,
                     "title":"TestEvent2",
-                    "start":"2018-08-19T14:30:00",
-                    "end":"2018-08-19T14:30:00",
+                    "start":"2020-02-21T14:30:00",
+                    "end":"2020-02-21T14:30:00",
                     "section": { "id":1, "name":"test", "color":"#004C00"},
                     "confirmed": true,
                     "color":"#ff0000"                    
@@ -187,8 +187,8 @@
                 {
                     "id":3,
                     "title":"TestEvent3",
-                    "start":"2018-08-30T14:30:00",
-                    "end":"2018-08-31T14:30:00",
+                    "start":"2020-02-22T14:30:00",
+                    "end":"2020-02-24T14:30:00",
                     "section": { "id":1, "name":"test", "color":"#0000FF"},
                     "confirmed": true,
                     "color":"#ff0000"                    
@@ -205,6 +205,23 @@
         "post": {            
             "username":"David",
             "password":"Face"
+        }
+    },
+    "/en/visitor/2020/02": {
+        "get": {            
+            "comboEventualities": [
+                { "id":1, "name":"test", "color":"#004C00"},
+                { "id":2, "name":"test2", "color":"#004C00"}
+            ],
+            "days": [
+                {
+                    "dailyInfo": 1,
+                    "date": "2020-02-21T14:30:00",
+                    "eventuality": 3,
+                    "visitorEstimate": 200,
+                    "visitorReal": 350
+                }
+            ]            
         }
     }
 }
